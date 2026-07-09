@@ -42,13 +42,17 @@ val keystoreProperties = Properties().apply {
 fun signingValue(envKey: String, propKey: String): String? =
     System.getenv(envKey) ?: keystoreProperties.getProperty(propKey)
 
-val storeFilePath: String? = System.getenv("ANDROID_KEYSTORE_PATH")
+// NOTE: these locals are deliberately NOT named storePassword/keyAlias/keyPassword
+// to avoid colliding with the SigningConfig DSL properties of the same name
+// (an unqualified reference inside create("release") { } would otherwise resolve
+// to the receiver's own null property and self-assign null).
+val ksStoreFilePath: String? = System.getenv("ANDROID_KEYSTORE_PATH")
     ?: keystoreProperties.getProperty("storeFile")
-val storePassword: String? = signingValue("ANDROID_KEYSTORE_PASSWORD", "storePassword")
-val keyAlias: String? = signingValue("ANDROID_KEY_ALIAS", "keyAlias")
-val keyPassword: String? = signingValue("ANDROID_KEY_PASSWORD", "keyPassword")
-val hasReleaseSigning = storeFilePath != null && storePassword != null &&
-    keyAlias != null && keyPassword != null
+val ksStorePassword: String? = signingValue("ANDROID_KEYSTORE_PASSWORD", "storePassword")
+val ksKeyAlias: String? = signingValue("ANDROID_KEY_ALIAS", "keyAlias")
+val ksKeyPassword: String? = signingValue("ANDROID_KEY_PASSWORD", "keyPassword")
+val hasReleaseSigning = ksStoreFilePath != null && ksStorePassword != null &&
+    ksKeyAlias != null && ksKeyPassword != null
 
 android {
     namespace = "com.matchplan.coach"
@@ -72,10 +76,10 @@ android {
     signingConfigs {
         if (hasReleaseSigning) {
             create("release") {
-                storeFile = file(storeFilePath!!)
-                this.storePassword = storePassword
-                this.keyAlias = keyAlias
-                this.keyPassword = keyPassword
+                storeFile = file(ksStoreFilePath!!)
+                storePassword = ksStorePassword
+                keyAlias = ksKeyAlias
+                keyPassword = ksKeyPassword
                 enableV1Signing = true
                 enableV2Signing = true
             }
