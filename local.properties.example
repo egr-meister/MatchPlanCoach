@@ -1,0 +1,11 @@
+# Copy this file to "local.properties" and fill in the values.
+# local.properties must NEVER be committed to Git (it is in .gitignore).
+
+# Path to your Android SDK (Android Studio sets this automatically).
+# sdk.dir=/Users/you/Library/Android/sdk
+
+# --- MatchPlan Coach: Match Schedule API (football-data.org, optional) ---
+# If you leave the token as the placeholder below (or empty), the app still
+# works and the Match Schedule screen shows built-in demo matches.
+FOOTBALL_DATA_API_TOKEN=your_api_token_here
+FOOTBALL_API_BASE_URL=https://api.football-data.org/v4

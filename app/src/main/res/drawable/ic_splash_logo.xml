@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- White football / player marker on the navy splash background -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,60 m-34,0 a34,34 0 1,0 68,0 a34,34 0 1,0 -68,0" />
+    <!-- Green field ring -->
+    <path
+        android:strokeColor="#2E8B45"
+        android:strokeWidth="4"
+        android:pathData="M60,60 m-22,0 a22,22 0 1,0 44,0 a22,22 0 1,0 -44,0" />
+    <!-- Calendar check accent -->
+    <path
+        android:strokeColor="#1F7A3A"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:pathData="M50,60 l7,7 l13,-16" />
+</vector>

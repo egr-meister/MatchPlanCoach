@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Green field card -->
+    <path
+        android:fillColor="#2E8B45"
+        android:pathData="M30,32 h48 a6,6 0 0 1 6,6 v32 a6,6 0 0 1 -6,6 h-48 a6,6 0 0 1 -6,-6 v-32 a6,6 0 0 1 6,-6 z" />
+
+    <!-- Pitch centre line -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.4"
+        android:pathData="M54,32 L54,76" />
+    <!-- Pitch centre circle -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.4"
+        android:pathData="M54,45 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0" />
+
+    <!-- White football / player marker -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,54 m-11,0 a11,11 0 1,0 22,0 a11,11 0 1,0 -22,0" />
+    <!-- Simple calendar check on the marker -->
+    <path
+        android:strokeColor="#1F7A3A"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M49,54 l4,4 l7,-8" />
+</vector>

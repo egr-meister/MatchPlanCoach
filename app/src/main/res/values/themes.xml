@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base app theme. The Compose UI does its own theming; this exists so the
+         window has sensible colors before Compose draws. -->
+    <style name="Theme.MatchPlanCoach" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/navy</item>
+        <item name="android:navigationBarColor">@color/white</item>
+    </style>
+
+    <!-- Custom splash screen (via androidx core-splashscreen).
+         Navy background with a green/white match-planner icon. -->
+    <style name="Theme.MatchPlanCoach.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/navy</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.MatchPlanCoach</item>
+    </style>
+
+</resources>

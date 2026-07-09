@@ -1,0 +1,18 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Signing / secrets — never commit these
+*.jks
+*.keystore
+*.p12
+keystore.properties
+release.keystore
+matchplan-coach-release-key.p12

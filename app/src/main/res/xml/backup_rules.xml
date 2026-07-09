@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Local DataStore is included in device-to-device transfer / auto backup.
+   No cloud account is used by the app itself.
+-->
+<full-backup-content>
+    <include domain="file" path="datastore/" />
+</full-backup-content>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="navy">#252E6B</color>
+    <color name="navy_dark">#1D2555</color>
+    <color name="green">#1F7A3A</color>
+    <color name="field_green">#2E8B45</color>
+    <color name="white">#FFFFFF</color>
+    <color name="ic_launcher_background">#252E6B</color>
+</resources>
